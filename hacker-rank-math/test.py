@@ -1,36 +1,45 @@
-#!/bin/python
+#!/bin/python3
 
-# from __future__ import print_function
-
+import math
 import os
+import random
+import re
 import sys
 
-#
-# Complete the findPoint function below.
-#
-# Midpoint of two point 
-def findPoint(px, py, qx, qy):
-    l=list()
-    nX=2*qx-px
-    nY=2*qy-py
-    l.append(nX)
-    l.append(nY)
-    # print(nX)
-    return l
+    # 0 1 2   1 2 3   2 3 4   3 4 5  
+
+  0 # 1 1 1   1 1 0   1 0 0   0 0 0
+  1 #   1       0       0       0
+  2 # 1 1 1   1 1 0   1 0 0   0 0 0
+
+  1 # 0 1 0   1 0 0   0 0 0   0 0 0
+  2 #   1       1       0       0
+  3 # 0 0 2   0 2 4   2 4 4   4 4 0
+
+  2 # 1 1 1   1 1 0   1 0 0   0 0 0
+  3 #   0       2       4       4
+  4 # 0 0 0   0 0 2   0 2 0   2 0 0
+
+  3 # 0 0 2   0 2 4   2 4 4   4 4 0
+  4 #   0       0       2       0
+  5 # 0 0 1   0 1 2   1 2 4   2 4 0
 
 
-n = int(raw_input())
+# Complete the array2D function below.
+def array2D(arr):
 
-for n_itr in xrange(n):
-    pxPyQxQy = raw_input().split()
+    for row in range(6):
+        for col in range(6):
+            if col==
 
-    px = int(pxPyQxQy[0])
 
-    py = int(pxPyQxQy[1])
 
-    qx = int(pxPyQxQy[2])
 
-    qy = int(pxPyQxQy[3])
+arr = []
 
-    result = findPoint(px, py, qx, qy)
-    print(' '.join(map(str,result)))
+for _ in range(6):
+    arr.append(list(map(int, input().rstrip().split())))
+
+result = array2D(arr)
+
+print result
